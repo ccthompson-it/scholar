@@ -4,10 +4,10 @@ const db = require('../db')
 
 const router = express.Router()
 
-router.get('/quotes', (req, res) => {
-  db.getQuotes()
+router.get('/all-tutors', (req, res) => {
+  db.getAllTutors()
     .then(results => {
-      res.json({ quotes: results.map(quote => quote.quote) })
+      res.json(results)
     })
     .catch(e => {
       console.log(e)
