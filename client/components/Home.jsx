@@ -14,7 +14,8 @@ class Home extends Component {
 
   async componentDidMount() {
     let tempQuotes = await getQuotes()
-    this.setState({ quotes: tempQuotes.quotes })
+    console.log(tempQuotes)
+    this.setState({ quotes: tempQuotes })
   }
 
   handleButton = () => {
@@ -31,7 +32,7 @@ class Home extends Component {
         <br/>
         <p className="bold">Here are some movie quotes:</p>
 
-        {quotes && quotes.map((quote, i) => <p key={i}>{quote}</p>)}
+        {quotes && quotes.map((className, i) => <p key={i}>{className}</p>)}
 
         <button onClick={this.handleButton}>About</button>
       </div>
