@@ -2,17 +2,12 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
 import Home from './Home'
-import About from './About'
 
 class App extends Component {
 
   render() {
-    let { page } = this.props
     return (
-      <div id='content'>
-        {page === 'home' && <Home />}
-        {page === 'about' && <About />}
-      </div>
+      <h1>Scholar Mun</h1>
     )
   }
 }

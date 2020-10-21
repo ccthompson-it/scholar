@@ -4,8 +4,8 @@ const db = require('../db')
 
 const router = express.Router()
 
-router.get('/all-tutors', (req, res) => {
-  db.getAllTutors()
+router.get('/all-teachers', (req, res) => {
+  db.getAllTeachers()
     .then(results => {
       res.json(results)
     })
