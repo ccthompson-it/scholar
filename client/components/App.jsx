@@ -1,18 +1,18 @@
-import React, {Component} from 'react'
-import {connect} from 'react-redux'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+
+import Container from 'react-bootstrap/Container'
+import Button from 'react-bootstrap/Button'
 
 import Home from './Home'
-import About from './About'
 
 class App extends Component {
 
   render() {
-    let { page } = this.props
     return (
-      <div id='content'>
-        {page === 'home' && <Home />}
-        {page === 'about' && <About />}
-      </div>
+      <Container>
+        <h1>Scholar Mun</h1>
+      </Container>
     )
   }
 }

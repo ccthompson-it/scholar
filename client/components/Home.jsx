@@ -15,7 +15,7 @@ class Home extends Component {
   async componentDidMount() {
     let tempQuotes = await getQuotes()
     console.log(tempQuotes)
-    this.setState({ quotes: tempQuotes })
+    this.setState({ quotes: tempQuotes.map(quote => {return quote.class_name}) })
   }
 
   handleButton = () => {
