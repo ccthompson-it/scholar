@@ -1,18 +1,17 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
+import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
-import Container from 'react-bootstrap/Container'
-import Button from 'react-bootstrap/Button'
-
-import Home from './Home'
 
 class App extends Component {
 
   render() {
     return (
-      <Container>
+      <Router>
         <h1>Scholar Mun</h1>
-      </Container>
+        <Link to='/profile'>Teacher</Link>
+        <Link to='/student'>Student</Link>
+      </Router>
     )
   }
 }
