@@ -10,9 +10,8 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Home Page!</h1>
-        <Link to='/teacher'>Teacher</Link>
-        <Link to='/student'>Student</Link>
+        <h1>Page could not be found</h1>
+        <Link to='/'>Home</Link>
       </div>
     )
   }
