@@ -5,6 +5,7 @@ import Home from './Home'
 import Student from './Student'
 import Teacher from './Teacher'
 import NotFound from './NotFound'
+import Profile from './Profile'
 
 export default function App(props) {
   return (
@@ -18,6 +19,9 @@ export default function App(props) {
         </Route>
         <Route exact path="/student">
           <Student />
+        </Route>
+        <Route exact path="/profile">
+          <Profile />
         </Route>
         <Route path="*">
           <NotFound />
