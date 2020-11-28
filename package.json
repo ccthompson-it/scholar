@@ -35,7 +35,6 @@
     ]
   },
   "dependencies": {
-    "authenticare": "^0.4.7",
     "babel": "^6.23.0",
     "bootstrap": "^4.5.3",
     "css-loader": "^5.0.0",
