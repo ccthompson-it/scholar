@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react'
 import {BrowserRouter as Router, Link, Route} from 'react-router-dom'
 
 
-class Teacher extends Component {
+class Profile extends Component {
   constructor(props) {
     super(props)
   }
@@ -10,12 +10,11 @@ class Teacher extends Component {
   render() {
     return (
       <Fragment>
-        <h1>Teacher Page!</h1>
-        <Link to='/profile'>Sign In</Link>
-        <Link to='/'>Home</Link>
+        <h1>Profile!</h1>
+        <Link to='/teacher'>Sign Out</Link>
       </Fragment>
     )
   }
 }
 
-export default Teacher
+export default Profile
