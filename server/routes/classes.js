@@ -1,6 +1,6 @@
 const express = require('express')
-
 const db = require('../db/classes')
+require('dotenv').config()
 
 const router = express.Router()
 
