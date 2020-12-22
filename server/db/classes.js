@@ -44,8 +44,8 @@ function getTeachersForClass(className, db = connection) {
     .where('classes.class_name', className)
 }
 
-function getTeacherProfile(db = connection) {
-  return db('teachers').select('firstname', 'lastname', 'email', 'hash')
+function getTeacherProfile(teacherId = 1, db = connection) {
+  return db('teachers').select('firstname', 'lastname', 'email', 'hash').first()
 }
 
 function getClassesByTeacher(teacherId, db = connection) {

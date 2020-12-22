@@ -9,3 +9,10 @@ export function getClasses () {
     })
 }
 
+export function getProfile () {
+  return request.get(rootUrl + '/profile')
+    .then(res => {
+      return res.body
+    })
+}
+

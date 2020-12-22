@@ -14,5 +14,15 @@ router.get('/all-teachers', (req, res) => {
     })
 })
 
+router.get('/profile', (req, res) => {
+  db.getTeacherProfile()
+    .then(results => {
+      res.json(results)
+    })
+    .catch(e => {
+      console.log(e)
+    })
+})
+
 
 module.exports = router
