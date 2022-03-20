@@ -1,8 +1,14 @@
-export const CHANGE_PAGE = 'CHANGE_PAGE'
+export const LOGIN = 'LOGIN'
+export const LOGOUT = 'LOGOUT'
 
-export const changePage = (page) => {
-  return {
-    type: CHANGE_PAGE,
-    page
-  }
+export const loginAction = () => {
+    return {
+        type: LOGIN,
+    }
+}
+
+export const logoutAction = () => {
+    return {
+        type: LOGOUT,
+    }
 }

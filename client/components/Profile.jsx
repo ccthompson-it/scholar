@@ -1,8 +1,12 @@
 import React, { useState, useEffect, Fragment } from 'react'
 import { Link } from 'react-router-dom'
 import { getProfile } from '../apiClient'
+import { connect } from "react-redux"
 
-export default function Profile(props) {
+import { login, logout } from "../helpers/login"
+
+function Profile(props) {
+  const { dispatch } = props
   const [user, setUser] = useState({})
 
   useEffect(() => {
@@ -17,7 +21,7 @@ export default function Profile(props) {
   return (
     <Fragment>
       <h1>Profile!</h1>
-      <Link to='/teacher'>Sign Out</Link>
+      <Link to="/teacher" onClick={() => { logout(dispatch) }}>Logout</Link>
 
       {user && <div>
           <h3>{user.firstname + ' ' + user.lastname}</h3>
@@ -27,3 +31,11 @@ export default function Profile(props) {
     </Fragment>
   )
 }
+
+function mapStateToProps(state) {
+  return {
+      login: state.login
+  }
+}
+
+export default connect(mapStateToProps)(Profile)
